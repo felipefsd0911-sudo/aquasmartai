@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AquaSmart AI</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AquaSmart AI</title>
+
 <style>
 
 body{
-font-family: Arial;
-background: linear-gradient(180deg,#0b1f3a,#0f2f5c);
-color:white;
 margin:0;
+font-family:Arial;
+background:linear-gradient(180deg,#07142a,#0d2b55);
+color:white;
 }
 
 header{
-text-align:center;
-padding:30px;
-font-size:28px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,0.3);
+}
+
+.logo{
+font-size:22px;
 font-weight:bold;
 }
 
-.container{
-padding:20px;
+nav a{
+color:white;
+margin:0 12px;
+text-decoration:none;
+opacity:0.8;
 }
 
-.card{
-background:#132b4f;
-padding:20px;
-margin-bottom:20px;
-border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,0.3);
+.hero{
+text-align:center;
+padding:60px 20px;
 }
 
-.card h2{
-margin-top:0;
+.upload{
+margin:30px auto;
+border:2px dashed rgba(255,255,255,0.3);
+padding:40px;
+width:300px;
+border-radius:15px;
 }
 
 button{
-background:#4db8ff;
+background:linear-gradient(90deg,#3aa0ff,#5cc8ff);
 border:none;
-padding:15px;
-width:100%;
-font-size:16px;
-border-radius:12px;
+padding:14px 25px;
+border-radius:10px;
 color:white;
+font-size:16px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:15px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+opacity:0.6;
 }
 
 </style>
@@ -51,30 +80,56 @@ color:white;
 <body>
 
 <header>
+
+<div class="logo">
 🐟 AquaSmart AI
+</div>
+
+<nav>
+<a href="#">Início</a>
+<a href="#">Meu Aquário</a>
+<a href="#">Planejador</a>
+<a href="#">Histórico</a>
+</nav>
+
 </header>
 
-<div class="container">
+<section class="hero">
+
+<h1>Envie a foto do peixe</h1>
+<p>Descubra espécie, compatibilidade e sugestões</p>
+
+<div class="upload">
+
+<button>Selecionar imagem</button>
+<p>ou arraste a foto aqui</p>
+
+</div>
+
+</section>
+
+<section class="grid">
 
 <div class="card">
-<h2>📷 Identificar peixe</h2>
-<p>Envie uma foto para descobrir qual espécie é.</p>
-<button>Enviar foto</button>
+<h3>Peixe detectado</h3>
+<p>Betta splendens</p>
 </div>
 
 <div class="card">
-<h2>🧮 Calculadora de aquário</h2>
-<p>Descubra quantos peixes cabem no seu aquário.</p>
-<button>Calcular</button>
+<h3>Compatibilidade</h3>
+<p>Moderada</p>
 </div>
 
 <div class="card">
-<h2>🐠 Compatibilidade</h2>
-<p>Veja quais peixes podem viver juntos.</p>
-<button>Ver compatibilidade</button>
+<h3>Sugestões</h3>
+<p>Tetra Neon<br>Rasbora</p>
 </div>
 
-</div>
+</section>
+
+<footer>
+AquaSmart AI
+</footer>
 
 </body>
 </html>
